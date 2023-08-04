@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="task6.css">
+  </head>
+  <body>
+
+    <div class="container mt-4" style="border:2px solid black; background-color:black; height:450px">
+      <h1 style="text-align:center; color:white" >Calculator</h1>
+    
+        <div class="mb-3">
+          
+          <input type="text" class="abc" id="t1" style="width:955px;height:62px; border:2px solid black">
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="row abc"><button onclick="click1(9)"> 9</button></div>
+                <div class="row abc"><button onclick="click1(6)"> 6</button></div>
+            </div>    
+            <div class="col-md-3">
+                <div class="row abc"><button onclick="click1(8)"> 8</button></div>
+                <div class="row abc"><button onclick="click1(5)"> 5</button></div>
+            </div>    
+            <div class="col-md-3">
+                <div class="row abc"><button onclick="click1(7)"> 7</button></div>
+                <div class="row abc"><button onclick="click1(4)"> 4</button></div>
+            </div>    
+            <div class="col-md-3">
+      <div class="row abc" >
+<button onclick="equal()" style="height:89px">=</button></div>  </div></div>
+<div class="row">
+  <div class="col-md-3">
+      <div class="row abc"><button onclick="click1(3)"> 3</button></div>
+      <div class="row abc"><button onclick="click1(0)"> 0</button></div>
+  </div>    
+  <div class="col-md-3">
+      <div class="row abc"><button onclick="click1(2)"> 2</button></div>
+      <div class="row abc"><button onclick="click1('-')"> -</button></div>
+  </div> 
+  <div class="col-md-3">
+      <div class="row abc"><button onclick="click1(1)"> 1</button></div>
+      <div class="row abc"><button onclick="click1('+')"> +</button></div>
+  </div>    
+  <div class="col-md-3">
+<div class="row abc" >
+<button onclick="click1('*')" > *</button></div>   
+<div class="row abc" >
+<button onclick="click1('/')" > /</button></div>  </div>
+<div class="row">
+  <div class="col-md-6 abc">
+    <button class="adi" onclick="clear1()">RESET</button></div>
+    <div class="col-md-6 abc">
+      <button class="adi ad1" onclick="clear2()">DELETE</button></div></div>
+    </div>
+    <script>
+      var st="";
+     function click1(a){
+        st=st+a;
+        document.getElementById('t1').value=st;   
+
+     }
+
+     function equal(){
+      st=eval(st);
+      document.getElementById('t1').value=st;   
+     }
+
+     function clear1(){
+      st="";
+      document.getElementById('t1').value=st;
+     }
+
+     function clear2(){
+      st=st.slice(0,st.length-1);
+      document.getElementById('t1').value=st;
+     }
+  
+    </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+</html>

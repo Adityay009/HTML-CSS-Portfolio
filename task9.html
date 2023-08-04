@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Fruits</title>
+  </head>
+  <body>
+    <div class="container mt-2">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+              <th scope="col">Fruit</th>
+              <th scope="col">FruitID</th>
+              <th scope="col">Fruit</th>
+              <th scope="col">FruitID</th>
+              <th scope="col">Fruit</th>
+              <th scope="col">FruitID</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Apple</th>
+              <td>app</td>
+              <td><b>Guava</b></td>
+              <td>gua</td>
+              <td><b>Kiwi</b></td>
+              <td>kiw</td>
+            </tr>
+            <tr>
+              <th scope="row">Mango</th>
+              <td>man</td>
+              <td><b>Watermelon</b></td>
+              <td>wat</td>
+              <td><b>Strawberry</b></td>
+              <td>str</td>
+            </tr>
+            <tr>
+              <th scope="row">Banana</th>
+              <td>ban</td>
+              <td><b>Papaya</b></td>
+              <td>pap</td>
+              <td><b>Pomegranate</b></td>
+              <td>pom</td>
+             </tr>
+             <tr>
+                <th scope="row">Grapes</th>
+                <td>gra</td>
+                <td><b>Peach</b></td>
+                <td>pea</td>
+                <td><b>Cherry</b></td>
+                <td>che</td>
+               </tr>
+               <tr>
+                <th scope="row">Orange</th>
+                <td>ora</td>
+                <td><b>Pineapple</b></td>
+                <td>pine</td>
+                <td><b>Lychee</b></td>
+                <td>lyc</td>
+               </tr>
+               
+          </tbody>
+        </table>
+    </div>
+    
+    <form>
+    <div class="container mt-2">    
+        <input type="text" class="form-control" id="abc" required>FruitID</input>
+    </div>
+
+    <div class="container mt-2">
+        <input type="number" class="form-control"id="xyz" required>QTY</input>
+    </div>
+</form>
+
+<div class="container mt-2">
+<button class="btn btn-dark" onclick="adi()">Add</button>
+</div>
+
+    <div class="container mt-2">
+        <div class="row mt-4">
+        <h1><b>BILL</b></h1>
+        </div>
+    </div>
+
+    <div class="container mt-2">
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+              <th scope="col">FruitID</th>
+              <th scope="col">Price</th>
+              <th scope="col">QTY</th>
+            </tr>
+        </thead>
+        <tbody id="pqr">
+        </tbody>
+    </table>
+    <h1 id="lmn">Total Amount : 0</h1>
+            </div>
+
+            <script>
+                let r=0;
+                function adi(){
+                    let p=document.getElementById("abc").value;
+                    let q=document.getElementById("xyz").value;
+
+                    var y=document.createElement("TR");
+                    let obj={
+                        app:200,
+                        man:70,
+                        ban:60,
+                        gra:90,
+                        ora:50,
+                        gua:80,
+                        wat:40,
+                        pap:50,
+                        pea:120,
+                        pine:70,
+                        kiw:150,
+                        str:220,
+                        pom:160,
+                        che:140,
+                        lyc:80
+                    };
+                 let z="";
+                 z+=`
+
+               <td>${p}</td>
+               <td>${obj[p]}</td>
+               <td>${q}</td>
+            
+               `;
+                y.innerHTML=z;
+                document.getElementById("pqr").appendChild(y);
+                r+=(obj[p]*q);
+                let s="";
+                s+=`Total Amount : ${r}`;
+                document.getElementById("lmn").innerHTML=s;
+                }
+            </script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
